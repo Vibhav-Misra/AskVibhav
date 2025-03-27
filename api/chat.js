@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
@@ -5,7 +7,8 @@ module.exports = async function handler(req, res) {
 
   const { message } = req.body;
 
-  const resumeData = `Vibhav Misra is a data science graduate student at Pace University in New York City, expected to graduate in May 2026. He holds a Bachelor's degree in Computer Science with a specialization in Artificial Intelligence and Machine Learning from Chandigarh University.
+  const resumeData = `
+Vibhav Misra is a data science graduate student at Pace University in New York City, expected to graduate in May 2026. He holds a Bachelor's degree in Computer Science with a specialization in Artificial Intelligence and Machine Learning from Chandigarh University.
 
 He has technical skills in Python, SQL, R, SAS, C++, and JavaScript. His machine learning experience includes supervised and unsupervised learning, neural networks, PCA, clustering, LSTM, and time series forecasting. He is proficient in tools like Pandas, NumPy, Scikit-Learn, TensorFlow, Prophet, Keras, Databricks, and Apache Spark.
 
@@ -20,7 +23,8 @@ Vibhav has worked on multiple academic projects, including:
 
 He completed a virtual data science internship with British Airways via Forage and holds certifications from IIT Madras, Coursera, and others in NLP, Data Science, and Mathematics.
 
-He is fluent in English and a native speaker of Hindi`;
+He is fluent in English and a native speaker of Hindi.
+`;
 
   const prompt = `
 You are a chatbot trained on Vibhav Misra’s resume. Answer the following question based only on the information in the resume below.
@@ -39,7 +43,7 @@ Question: ${message}
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: "mixtral-8x7b-32768", 
+        model: "mixtral-8x7b-32768",
         messages: [
           { role: "system", content: "You are a helpful assistant who knows everything about Vibhav Misra's resume." },
           { role: "user", content: prompt }
@@ -50,20 +54,18 @@ Question: ${message}
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`Groq API returned status ${response.status}: ${errorText}`);
+      console.error("Groq API error response:", errorText);
+      throw new Error(`Groq API returned ${response.status}`);
     }
 
     const data = await response.json();
     console.log("Groq response:", data);
 
-    const data = await response.json();
-    console.log("Groq response:", data); 
     const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't come up with a response.";
-
     res.status(200).json({ reply });
+
   } catch (error) {
-    console.error("Groq API error:", error?.response?.data || error?.message || error);
+    console.error("Groq API error:", error?.message || error);
     res.status(500).json({ error: "Failed to fetch response from Groq." });
   }
-
-}
+};
