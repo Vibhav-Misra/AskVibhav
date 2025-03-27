@@ -48,12 +48,22 @@ Question: ${message}
       })
     });
 
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Groq API returned status ${response.status}: ${errorText}`);
+    }
+
     const data = await response.json();
-    const reply = data.choices[0]?.message?.content || "Sorry, I couldn't come up with a response.";
+    console.log("Groq response:", data);
+
+    const data = await response.json();
+    console.log("Groq response:", data); 
+    const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn't come up with a response.";
 
     res.status(200).json({ reply });
   } catch (error) {
-    console.error("Groq API error:", error);
+    console.error("Groq API error:", error?.response?.data || error?.message || error);
     res.status(500).json({ error: "Failed to fetch response from Groq." });
   }
+
 }
