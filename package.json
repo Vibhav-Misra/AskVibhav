@@ -1,0 +1,19 @@
+{
+  "name": "ask-vibhav",
+  "version": "1.0.0",
+  "description": "GPT-powered chatbot trained on Vibhav Misra's resume using Groq API",
+  "main": "api/chat.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node api/chat.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": ["chatbot", "vercel", "gpt", "groq", "resume", "portfolio"],
+  "author": "Vibhav Misra",
+  "license": "MIT"
+}
