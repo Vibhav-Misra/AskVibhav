@@ -43,7 +43,7 @@ Question: ${message}
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: "mixtral-8x7b-32768",
+        model: "llama3-8b-8192",
         messages: [
           { role: "system", content: "You are a helpful assistant who knows everything about Vibhav Misra's resume." },
           { role: "user", content: prompt }
