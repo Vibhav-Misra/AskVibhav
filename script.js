@@ -1,23 +1,32 @@
 async function sendMessage() {
-    const inputField = document.getElementById('userInput');
-    const userText = inputField.value.trim();
-    if (!userText) return;
-  
-    const chatbox = document.getElementById('chatbox');
-  
-    chatbox.innerHTML += `<p class="user">${userText}</p>`;
-    inputField.value = '';
-    chatbox.scrollTop = chatbox.scrollHeight;
-  
-    const response = await fetch('https://your-vercel-or-api-url.com/api/chat', {
+  const inputField = document.getElementById('userInput');
+  const userText = inputField.value.trim();
+  if (!userText) return;
+
+  const chatbox = document.getElementById('chatbox');
+
+  chatbox.innerHTML += `<p class="user">${userText}</p>`;
+  inputField.value = '';
+  chatbox.scrollTop = chatbox.scrollHeight;
+
+  try {
+    const response = await fetch('/api/chat', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({ message: userText })
     });
-  
+
     const data = await response.json();
-  
-    chatbox.innerHTML += `<p class="bot">${data.reply}</p>`;
+    const reply = data.reply || "Sorry, something went wrong.";
+
+    // Show bot response
+    chatbox.innerHTML += `<p class="bot">${reply}</p>`;
     chatbox.scrollTop = chatbox.scrollHeight;
+
+  } catch (err) {
+    console.error("Error:", err);
+    chatbox.innerHTML += `<p class="bot">⚠️ Error fetching response.</p>`;
   }
-  
+}
