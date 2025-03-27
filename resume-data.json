@@ -1,0 +1,107 @@
+{
+  "name": "Vibhav Misra",
+  "location": "New York, NY",
+  "email": "vibhavemail@gmail.com",
+  "phone": "646-393-7014",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/vibhav-misra/",
+    "github": "https://github.com/Vibhav-Misra",
+    "portfolio": "https://vibhavmisra.com"
+  },
+  "profile": "Data Scientist with a strong foundation in data analysis, machine learning, and artificial intelligence. Proficient in Python and adept at designing and deploying machine learning models to deliver data-driven solutions. Experienced in tackling complex challenges and collaborating with teams to implement impactful strategies across diverse industries.",
+  "education": [
+    {
+      "degree": "MS in Data Science",
+      "institution": "Pace University, Seidenberg School of Computer Science and Information Systems",
+      "location": "New York City, NY",
+      "graduation": "May 2026"
+    },
+    {
+      "degree": "BE in Computer Science with specialization in Artificial Intelligence and Machine Learning",
+      "institution": "Chandigarh University, Apex Institute of Technology",
+      "location": "India",
+      "graduation": "June 2024"
+    }
+  ],
+  "technical_skills": {
+    "programming_languages": ["Python", "SQL", "R", "SAS", "C++", "JavaScript"],
+    "machine_learning_ai": ["Supervised Learning", "Unsupervised Learning", "Neural Networks", "PCA", "Clustering", "KNN", "LSTM", "Time Series Forecasting"],
+    "tools": ["Pandas", "NumPy", "Scikit-Learn", "TensorFlow", "Prophet", "Keras", "Jupyter Notebooks", "Apache Spark", "Databricks", "Git/GitHub", "Anaconda"],
+    "big_data": ["MySQL", "MongoDB", "HBase", "Hadoop File System (HDFS)", "MapReduce"],
+    "data_visualization": ["Tableau", "Power BI", "Matplotlib", "Seaborn", "Excel"],
+    "additional_skills": ["Data Mining", "Statistical Analysis", "Hypothesis Testing", "Regression", "EDA", "Data Cleaning"]
+  },
+  "virtual_experience": [
+    {
+      "company": "British Airways",
+      "program": "Data Science Job Simulation via Forage",
+      "date": "November 2024",
+      "details": [
+        "Scraped and analyzed over 1,000 customer reviews using sentiment analysis techniques.",
+        "Built a predictive model using Random Forest to identify key booking factors with 85% accuracy."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Forecasting Amazon Review Ratings",
+      "duration": "October 2024 – December 2024",
+      "technologies": ["ARIMA", "Prophet", "LSTM"],
+      "highlights": [
+        "Conducted time series analysis to forecast product review trends.",
+        "LSTM achieved lowest RMSE of 0.07, outperforming others.",
+        "Engineered features, handled seasonality, and visualized trends."
+      ]
+    },
+    {
+      "title": "Electric Vehicle Adoption Analysis in Washington State",
+      "duration": "September 2024 – November 2024",
+      "technologies": ["Pandas", "Matplotlib", "Seaborn", "Plotly"],
+      "highlights": [
+        "Analyzed 200,000+ records from Washington State’s open data.",
+        "Identified patterns by make, model, location, and policy impact."
+      ]
+    },
+    {
+      "title": "Comparative Study of Decision Tree and Random Forest Models",
+      "duration": "November 2024",
+      "technologies": ["GridSearchCV", "RandomizedSearchCV"],
+      "highlights": [
+        "Built and tuned models on Digits dataset.",
+        "Random Forest achieved 98.33% accuracy.",
+        "Compared with Decision Tree and used confusion matrix for evaluation."
+      ]
+    },
+    {
+      "title": "BioML",
+      "duration": "January 2024 – April 2024",
+      "technologies": ["Flask", "Python", "HTML", "CSS", "JavaScript", "NumPy", "Scikit-Learn"],
+      "highlights": [
+        "Built a disease prediction web app with 90% validation accuracy.",
+        "Led a team of 4 and developed the UI + predictive backend.",
+        "Deployed app on GitHub with real-time prediction capability."
+      ]
+    },
+    {
+      "title": "Detecting Phishing Websites using Machine Learning",
+      "duration": "August 2023 – November 2023",
+      "technologies": ["Gradient Boosting", "Flask", "SVM", "Random Forest", "Logistic Regression"],
+      "highlights": [
+        "Created a phishing detection app with 85% accuracy.",
+        "Engineered 30+ features for detection.",
+        "Built real-time interface and compared multiple algorithms."
+      ]
+    }
+  ],
+  "certifications": [
+    "Mathematics for Machine Learning and Data Science Specialization – Coursera (October 2023)",
+    "Natural Language Processing Specialization – Coursera (May 2023)",
+    "Applied Data Science Specialization – Coursera (July 2022)"
+  ],
+  "academic_achievements": [
+    "Pilot batch member of IIT Madras Online BSc in Programming & Data Science.",
+    "Completed Foundational Level (8 courses, 32 credits) – CODE, IIT Madras.",
+    "Started Diploma Level (Machine Learning, Business Analytics, etc.), transitioned to MS in USA before completion."
+  ],
+  "languages": ["English (Fluent)", "Hindi (Native)"]
+}
