@@ -10,11 +10,26 @@ module.exports = async function handler(req, res) {
   const resumeData = `
 Vibhav Misra is a data science graduate student at Pace University in New York City, expected to graduate in May 2026. He holds a Bachelor's degree in Computer Science with a specialization in Artificial Intelligence and Machine Learning from Chandigarh University.
 
-He has technical skills in Python, SQL, R, SAS, C++, and JavaScript. His machine learning experience includes supervised and unsupervised learning, neural networks, PCA, clustering, LSTM, and time series forecasting. He is proficient in tools like Pandas, NumPy, Scikit-Learn, TensorFlow, Prophet, Keras, Databricks, and Apache Spark.
+His technical skills are as follows
+- Programming: Python, SQL, R, React, JavaScript
+- MLOps & Experiment Tracking: MLflow, Model Registry, Experiment Tracking
+- Cloud Platforms: AWS (S3, Lambda, EMR on EC2)
+- ML & AI: Supervised & Unsupervised Learning, Neural Networks, Time Series Forecasting, Generative AI (OpenAI API)
+- Data Science & Analytics Tools: Pandas, NumPy, Scikit-Learn, TensorFlow, Prophet, Keras, Jupyter Notebooks, Anaconda
+- Big Data & Databases: MySQL, MongoDB, HBase, Neo4j, Hadoop (HDFS, MapReduce), Apache Spark
+- Data Visualization: Power BI, Looker (dashboards, basic LookML modeling), Tableau, Matplotlib, Seaborn, Excel
 
-His data visualization skills include Tableau, Power BI, Matplotlib, Seaborn, and Excel. He also has experience with big data tools such as Hadoop, MapReduce, MongoDB, and MySQL.
+His professional experiance is as follows 
+- Worked at EdMyst Inc. Lewes, DE as a Data Science Intern from June 2025 till September 2025.
+- Designed and documented a personalization system for an AI coaching platform (Edy), integrating onboarding data, session
+performance, behavioral metrics, and feedback into a long-term user memory, with supporting architecture and data flows using
+MongoDB, AWS S3, Lambda, and LLM prompt injection.
+- Developed and tested a real-time video chunking and upload pipeline using WebRTC, Node.js, and AWS S3 multipart uploads,
+enabling seamless video transfer and future analytics integration.
 
 Vibhav has worked on multiple academic projects, including:
+- An Exoplanet Habitability Explorer with a RF classifier, presets, details drawer, and compare tray.
+- Real-Time NYC Subway Tracker (Expected Completion: September 2025) 
 - A disease prediction app (BioML) using Flask and machine learning.
 - A phishing website detection system using Gradient Boosting.
 - Forecasting Amazon product review ratings using ARIMA, Prophet, and LSTM.
@@ -22,6 +37,14 @@ Vibhav has worked on multiple academic projects, including:
 - A comparative study of Decision Tree and Random Forest with hyperparameter tuning.
 
 He completed a virtual data science internship with British Airways via Forage and holds certifications from IIT Madras, Coursera, and others in NLP, Data Science, and Mathematics.
+
+He has the following certifications - 
+- Mathematicsfor Machine Learning and Data Science Specialization (Linear Algebra for Machine Learning and Data Science, Calculus
+for Machine Learning and Data Science, Probability & Statistics for Machine Learning & Data Science) from Coursera.
+- Natural Language Processing Specialization (NLP with Classification and Vector Spaces, NLP with Probabilistic Models, NLP with
+Sequence Models, NLP with Attention Models) from Coursera.
+- Applied Data Science Specialization (Python for Data Science, AI & Development, Python Project for Data Science, Applied Data
+Science Capstone, Data Visualization with Python, Data Analysis with Python) from Coursera. 
 
 He is fluent in English and a native speaker of Hindi.
 `;
@@ -69,3 +92,4 @@ Question: ${message}
     res.status(500).json({ error: "Failed to fetch response from Groq." });
   }
 };
+
